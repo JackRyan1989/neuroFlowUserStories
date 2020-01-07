@@ -19,26 +19,18 @@ NPM Packages:
 4. React-audio-player
 
 Directory Structure:
-
-|--NeuroflowUserStories
-    |
-    |__client - package.json | README.md
-        |
-        |__ public - index.html
-        |      |
-        |      |__ assets - audio_files.json
-        |
-        |__ node_modules
-        |
-        |__ src - App.js | index.js
-             |
-             |__ components
-                    |
-                    |__ AudioCard - AudioCard.js
-                    |__ AudioPlayer - AudioPlayer.js
-                    |__ ContentBar - ContentBar.js
-                    |__ Header - Header.js
-                    |__ SoundBoard - SoundBoard.js
+* NeuroflowUserStories
+  * **client** - package.json | README.md
+  * **public** - index.html
+    * **assets** - audio_files.json
+  * **node_modules**
+  * **src** - App.js | index.js
+   * **components**
+        - **AudioCard** - AudioCard.js
+        - **AudioPlayer** - AudioPlayer.js
+        - **ContentBar** - ContentBar.js
+        - **Header** - Header.js
+        - **SoundBoard** - SoundBoard.js
 
 How to run application: 
 
