@@ -1,6 +1,5 @@
 # neuroFlowUserStories
-Display an audio collection to the user. Built primarily in React.
-
+Display an audio collection to the user. Built in React.
 
 Goal of the application:
 
@@ -16,11 +15,30 @@ NPM Packages:
 
 1. React
 2. React-router-dom
-3. React-bootstrap
-
+3. React-bootstrap & Bootstrap
+4. React-audio-player
 
 Directory Structure:
 
+|--NeuroflowUserStories
+    |
+    |__client - package.json | README.md
+        |
+        |__ public - index.html
+        |      |
+        |      |__ assets - audio_files.json
+        |
+        |__ node_modules
+        |
+        |__ src - App.js | index.js
+             |
+             |__ components
+                    |
+                    |__ AudioCard - AudioCard.js
+                    |__ AudioPlayer - AudioPlayer.js
+                    |__ ContentBar - ContentBar.js
+                    |__ Header - Header.js
+                    |__ SoundBoard - SoundBoard.js
 
 How to run application: 
 
@@ -28,11 +46,16 @@ Since this application has not been deployed to a hosting service such as Heroku
 
 1. Clone the git repository to your machine
 2. Navigate to the 'client' directory
-3. In the command line, run 'npm init'
+3. In the command line, run 'npm install' if using NPM or run 'yarn install' if you're a yarn fan.
 4. The previous command will install all dependencies for this application to your machine. Note: this may take a little while, i.e. a few minutes, as React has quite a few built in dependencies.
 5. Once the dependencies have finished installing, type 'npm start' into the command line.
 6. The application will begin! You'll receive any notifications in the command line. Hopefully everything will be hunky-dory and the app will open automatically in your browser.
-7. Note: The application will try to run on //localhost:3001/ if it is available. If port 3001 is not available, React will ask via the command line whether you would like to use another port. Say yes to continue to see the application via an available port, or cancel to cancel the process. 
+7. Note: The application will try to run on //localhost:3000/ if it is available. If port 3000 is not available, React will ask via the command line whether you would like to use another port. Say yes to continue to see the application via an available port, or cancel to cancel the process. 
+
+Development plans:
+1. Refactor components in the ContentBar.js
+2. Finish styling
+3. Redo the audio player so that it notifies the user that a file is unavailable
 
 Email: jack.jackryan@gmail.com
 GitHub: JackRyan1989

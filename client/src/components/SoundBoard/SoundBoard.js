@@ -1,11 +1,11 @@
 import React from 'react';
-//Import react-bootstrap components:
+// Import react-bootstrap components:
 import Container from 'react-bootstrap/Container';
-//Custom components:
+// Custom components:
 import AudioCard from '../AudioCard/AudioCard';
 
 const SoundBoard = ({error, loading, filteredData}) => {
-    //Render the page with the current state:    
+    // Render the page with the current state:    
     return (   
             <Container>
                 {/* Short circuit operator: If we are loading data or an error has occurred while loading the data, display the appropriate message. */}
@@ -19,8 +19,7 @@ const SoundBoard = ({error, loading, filteredData}) => {
     );
 }
 
-
-//Export the module so we can use it elsewhere (e.g. in App.js):
+// Export the module so we can use it elsewhere (e.g. in App.js):
 export default SoundBoard;
 
 

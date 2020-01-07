@@ -1,8 +1,9 @@
 import React from 'react';
-//Import react-bootstrap components:
+// Import react-bootstrap components:
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+// This is a simple jumbotron for displaying the title and subtitle:
 const Header = () => {
     return(
         <Container>
@@ -14,5 +15,5 @@ const Header = () => {
     )
 }
 
-//Export the module so we can use it elsewhere (e.g. in App.js):
+// Export the module so we can use it elsewhere (e.g. in App.js):
 export default Header;

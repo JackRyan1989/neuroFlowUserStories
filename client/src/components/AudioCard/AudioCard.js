@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
-//Import react-bootstrap components:
+// Import react-bootstrap components:
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
-//Custom components:
+// Custom components:
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
 // This is a stateless component that receives all it's info from SoundBoard.js
 // Each card is styled using react-bootstrap components.
 // The data about each file is pulled from the audioFile object.
-let count = 0;
 const AudioCard = ({ audioFile }) => {
 
-    //Use the useState hook to toggle the full descrition:
+    // Use the useState hook to toggle the full description:
+    // Future improvement: remove the count variable and set the state of the button to be 'toggled' or not. 
+    // Currently the count can be thrown off if you leave a description open and click another one to open.
     const [toggled, setToggle] = useState(false);
+    let count = 0;
     const displayDesc = () => {
         count = count+1;
         setToggle(true);
@@ -24,7 +26,7 @@ const AudioCard = ({ audioFile }) => {
         }
     }
 
-    //We render to the DOM what is in the return statement: 
+    // We render to the DOM what is in the return statement: 
     return (
         <Container sm={8}>
             <Row>
@@ -52,5 +54,5 @@ const AudioCard = ({ audioFile }) => {
     )
 }
 
-//Export the module so we can use it elsewhere (e.g. in SoundBoard.js):
+// Export the module so we can use it elsewhere (e.g. in SoundBoard.js):
 export default AudioCard;

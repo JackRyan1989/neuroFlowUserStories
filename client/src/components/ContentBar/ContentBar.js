@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//Import react-bootstrap components:
+// Import react-bootstrap components:
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -7,11 +7,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SoundBoard from '../SoundBoard/SoundBoard';
 
-// The ContentBar component will load the audio files from the .json file located in /assets. 
-// It will then loop through the files, and display each separately. 
-// The data from the json file will be loaded into this.state.data
-// A notification that the data is loading will be made visible to the user until this.state.loading is set to false.
-// The error message is currently blank, but will be set by a try/catch function if something goes wrong.
 class ContentBar extends Component {
     constructor(props) {
         super(props);
@@ -22,8 +17,13 @@ class ContentBar extends Component {
             error: '',
         }
     }
-
-    //Run an asynchronous function to get the data from the assets/audio_files.json file when this component mounts (on page load).
+    
+    // The ContentBar component will load the audio files from the .json file located in /assets. 
+    // It will then loop through the files, and display each separately. 
+    // The data from the json file will be loaded into this.state.data
+    // A notification that the data is loading will be made visible to the user until this.state.loading is set to false.
+    // The error message is currently blank, but will be set by a try/catch function if something goes wrong.
+    // Run an asynchronous function to get the data from the assets/audio_files.json file when this component mounts (on page load).
     async componentDidMount() {
         //Embed the fetch function in a try/catch function:
         try {
@@ -48,7 +48,7 @@ class ContentBar extends Component {
         }
     }
 
-    //Sorted the data based on what button the user clicks. 
+    // Sort the data based on what button the user clicks. Returns filteredData and sets the state. 
     handleDataSort = (type) => {
         if (type === 'all') {
             this.setState({
@@ -67,8 +67,9 @@ class ContentBar extends Component {
         }
     }
 
-    //Create a bar that allows users to select what data they want to see:
+    // Create a bar that allows users to select what data they want to see:
     render() {
+        //***The following code is quite wet, please refactor in the future*** 
         const { data, filteredData, loading, error } = this.state;
         let arr = [];
         data.forEach(elem => arr.push(elem.category));
@@ -126,4 +127,5 @@ class ContentBar extends Component {
     }
 }
 
+// Export the module so we can use it elsewhere (e.g. in App.js):
 export default ContentBar;

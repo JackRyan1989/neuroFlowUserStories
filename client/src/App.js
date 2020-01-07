@@ -9,6 +9,7 @@ function App() {
   return (
     <Container fluid style={{'backgroundColor': '#c3cde6'}}>
       <Header />
+      {/* dataSource must remain in the public directory */}
       <ContentBar dataSource={'../../assets/audio_files.json'}/>
     </Container>
   );
