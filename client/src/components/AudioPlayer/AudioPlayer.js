@@ -2,13 +2,14 @@ import React from 'react';
 //Import React Audio Player
 import ReactAudioPlayer from 'react-audio-player';
 
+
 const AudioPlayer = ({ src }) => {
-    return (   
-            <ReactAudioPlayer
-                style={{ display: 'block', width: "14rem" }}
-                src={src}
-                controls
-            /> 
+    return (
+        <ReactAudioPlayer
+            style={{ display: 'block', width: "14rem" }}
+            src={src}
+            controls
+        />
     )
 }
 

@@ -6,9 +6,9 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 const Header = () => {
     return(
         <Container>
-            <Jumbotron>
+            <Jumbotron className='w-100 text-white rounded-0' style={{'background-color': '#365577'}}>
                 <h1 className='mx-4 mb-4'>Meditation Guides</h1>
-                <h3 className='mx-4 pt-2'>Clear your mind and calm your body with these Meditation and Mindfulness resources</h3>
+                <h3 className='mx-4 pt-2'>Clear your mind and calm your body with these meditation and mindfulness resources</h3>
             </Jumbotron>
         </Container>
     )
